@@ -1,0 +1,103 @@
+/* transform */
+@font-face {
+  font-family: "Didone";
+  src: url("../../fonts/didone-light.otf") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Didone";
+  src: url("../../fonts/didone-medium.otf") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Didone Wide Medum";
+  src: url("../../fonts/didone-wide-medium.otf") format("woff");
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Didone Compack Dark";
+  src: url("../../fonts/didone-compack-dark.otf") format("woff");
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Didone right";
+  src: url("../../fonts/PP-Right-Didone-Medium.otf") format("woff");
+  font-style: normal;
+  font-display: swap;
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Didone right";
+  src: url("../../fonts/PP-Right-Didone-Light.otf") format("woff");
+  font-style: normal;
+  font-display: swap;
+  font-weight: 300;
+}
+:root {
+  /**
+  @font family declaration
+  */
+  --tp-ff-body: 'DM Sans', sans-serif;
+  --tp-ff-heading: 'Didone', sans-serif;
+  --tp-ff-p: 'DM Sans', sans-serif;
+  --tp-ff-dmsans: 'DM Sans', sans-serif;
+  --tp-ff-didone: 'Didone', sans-serif;
+  --tp-ff-didoneWideMedium: 'Didone Wide Medum', serif;
+  --tp-ff-didoneCompackDark: 'Didone Compack Dark', serif;
+  --tp-ff-didoneright: 'Didone right', serif;
+  --tp-ff-garamond: 'EB Garamond', serif;
+  --tp-ff-kufam: 'Kufam', sans-serif;
+  --tp-ff-abril: 'Abril Fatface', cursive;
+  --tp-ff-fontawesome: "Font Awesome 6 Pro";
+  /**
+  @color declaration
+  */
+  --tp-common-white: #ffffff;
+  --tp-common-white-2: #E4E6DC;
+  --tp-common-white-3: #F0F0F6;
+  --tp-common-black-solid: #000;
+  --tp-common-black: #020B18;
+  --tp-common-black-2: #0C1B05;
+  --tp-common-black-3: #252525;
+  --tp-common-black-4: #5B5B5C;
+  --tp-common-black-5: #171718;
+  --tp-common-black-6: #192553;
+  --tp-dark-white: #ffffff;
+  --tp-dark-black-solid: #000;
+  --tp-dark-black: #020B18;
+  --tp-dark-black-2: #000F4A;
+  --tp-dark-black-3: #162251;
+  --tp-dark-black-4: #0F183E;
+  --tp-dark-black-5: #213617;
+  --tp-yellow-1: #FFB342;
+  --tp-pink-1: #FD4B6B;
+  --tp-pink-2: #FF5746;
+  --tp-green-dark: #115061;
+  --tp-green-1: #31B757;
+  --tp-green-2: #BCE70C;
+  --tp-khaki-1: #AB9774;
+  --tp-blue-1: #0989FF;
+  --tp-blue-2: #4C40F7;
+  --tp-orange-1: #FF6736;
+  --tp-heading-primary: #020B18;
+  --tp-heading-secondary: #021D35;
+  --tp-headingDark-primary: #020B18;
+  --tp-headingDark-secondary: #021D35;
+  --tp-grey-1: #F6F7F9;
+  --tp-grey-2: #2F3862;
+  --tp-grey-3: #F6F9FF;
+  --tp-grey-4: #DDDDE7;
+  --tp-text-body: #55585B;
+  --tp-text-1: #767A7D;
+  --tp-theme-primary: #0989FF;
+  --tp-theme-secondary: #1A2813;
+  --tp-footer-grey-1: #F4F7F9;
+  --tp-border-primary: #EAEBED;
+  --tp-border-secondary: #F0F2F4;
+}/*# sourceMappingURL=index.css.map */

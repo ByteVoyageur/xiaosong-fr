@@ -1,0 +1,177 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  2.15 Section Title
+/*----------------------------------------*/
+
+.tp-section{
+    &-subtitle{
+        @extend %ff-garamond;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 28px;
+        letter-spacing: 0.02em;
+        @include gradient((91deg, #BCFFA4 5.09%, #F59571 98.42%));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
+        display: inline-block;
+        margin-bottom: 11px;
+        @include transform(rotate(-35deg));
+        position: absolute;
+        top: -25px;
+        left: -45px;
+        @media #{$lg}{
+            position: static;
+            @include transform(rotate(0deg));
+        }
+        @media #{$md}{
+            position: static;
+            @include transform(rotate(0deg));
+        }
+        @media #{$xs}{
+            @include transform(rotate(0deg));
+            top: -30px;
+            left: 0
+        }
+        &.tp-portfolio-subtitle{
+            @media #{$md}{
+                top: -30px;
+                @include transform(rotate(0deg));
+                left: 0
+            }
+        }
+        &.tp-award-subtitle{
+            @media #{$md}{
+                top: -30px;
+                @include transform(rotate(0deg));
+                left: 0
+            }
+        }
+        &.tp-about-subtitle{
+            @media #{$md}{
+                left: 0px;
+            }
+        }
+        &-1{
+            @include transform(none);
+            top: -45px;
+        }
+
+        &-bg{
+            @extend %ff-abril;
+            position: absolute;
+            top: -124px;
+            left: -108px;
+            font-size: 160px;
+            line-height: .88;
+            -webkit-text-fill-color: transparent;
+            color: transparent;
+            -webkit-text-stroke-color: rgba($color: $white, $alpha: .05);
+            -webkit-text-stroke-width: 2px;
+            -moz-text-stroke-color:  rgba($color: $white, $alpha: .05);
+            -moz-text-stroke-width: 2px;
+            -moz-text-fill-color: transparent;
+            display: inline-block;
+            @media #{$lg}{
+                font-size: 130px;
+            }
+            @media #{$xs}{
+                font-size: 100px;
+                left: 0;
+            }
+        }
+    }
+    &-title{
+        font-size: 70px;
+        letter-spacing: -0.02em;
+        color: var(--tp-common-white);
+        font-weight: 700;
+        line-height: .94;
+        @extend %ff-dmsans;
+        margin-bottom: 15px;
+        @media #{$xs}{
+            font-size: 39px;
+            & br{
+                display: none;
+            }
+        }
+        &-wrapper{
+            & p{
+                font-size: 17px;
+                line-height: 1.4;
+                color: rgba($color: $white, $alpha: .7);
+            }
+        }
+        &-inner{
+            display: inline-block;
+            & .tp-section-title{
+                @media #{$xl}{
+                    font-size: 65px;
+                    & br{
+                        display: none;
+                    }
+                }
+                @media #{$lg}{
+                    font-size: 60px;
+                    & br{
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
+.tp-section{
+    &-subtitle-3{
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 1;
+        color: var(--tp-common-white);
+        font-family: var(--tp-ff-didoneright);
+        padding-bottom: 10px;
+        display: inline-block; 
+    }
+    &-subtitle-4{
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 1;
+        letter-spacing: 0.1em;
+        color: var(--tp-common-white);
+        font-family: var(--tp-ff-didoneright);
+        display: inline-block;
+        
+    }
+    &-title-3{
+        font-weight: 500;
+        font-size: 80px;
+        line-height: 1;
+        letter-spacing: -0.02em;
+        color: var(--tp-common-white);
+        font-family: var(--tp-ff-didoneright);
+        margin-bottom: 25px;
+        @media #{$lg}{
+            font-size: 70px;
+        }
+        @media #{$md}{
+            font-size: 50px;
+        }
+        @media #{$xs}{
+            font-size: 40px;
+        }
+        
+    }
+    &-title-4{
+        font-weight: 500;
+        font-size: 60px;
+        line-height: 1;
+        letter-spacing: -0.01em;
+        color: var(--tp-common-white);
+        font-family: var(--tp-ff-didoneright);
+        @media #{$xs}{
+            font-size: 38px;
+        }
+        
+    }
+}

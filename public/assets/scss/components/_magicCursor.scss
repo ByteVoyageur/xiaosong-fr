@@ -1,0 +1,90 @@
+
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  2.19 Magic Cursor css start
+/*----------------------------------------*/
+
+body:not(.hide-magic-cursor):is(.show-magic-cursor){
+    
+}
+
+#awesome-cursor{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 30px;
+    height: 30px;
+    pointer-events: none;
+    z-index: 999999;
+    @include transition-mul((transform 0.2s ease-in-out 0.5s, opacity 0.2s ease-in-out 0.5s, border 0.2s ease-in-out 0.5s));
+
+    &-circle{
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        background-color: rgba($color: #fff, $alpha: .5);
+        position: fixed;
+        border-radius: 50%;
+        top: 0;
+        left: 0;
+        @include transition-mul((transform 0.15s cubic-bezier(0.215, 0.61, 0.355, 1), opacity 0.2s 0.15s cubic-bezier(0.215, 0.61, 0.355, 1), border 0.15s cubic-bezier(0.215, 0.61, 0.355, 1)));
+
+        &.nice-select-circle{
+            border-color: var(--tp-pink-2);
+            opacity: .5;
+        }
+    }
+    &-play{
+        @include transform(scale(0));
+
+        @include transition-mul((transform .3s linear));
+
+        &.cursor-entered{
+            @include transform(scale(2));
+          
+        }
+
+        .awesome-cursor-play-start,
+        .awesome-cursor-play-stop{
+            font-size: 16px;
+            color: var(--tp-common-black);
+            font-family: var(--tp-ff-didoneright);
+            width: 70px;
+            height: 70px;
+            line-height: 70px;
+            text-align: center;
+            border-radius: 50%;
+            background-color: var(--tp-common-white);
+            display: inline-block;
+            visibility: hidden;
+            opacity: 0;
+            @include transition-mul((visibility .3s linear, opacity .3s linear));
+        }
+
+        &.playing{
+            & .awesome-cursor-play-start{
+                display: none;
+                visibility: hidden;
+                opacity: 0;
+            }
+
+            & .awesome-cursor-play-stop{
+                visibility: visible;
+                opacity: 1;
+            }
+        }
+        &.stopped{
+            & .awesome-cursor-play-start{
+                visibility: visible;
+                opacity: 1;
+            }
+
+            & .awesome-cursor-play-stop{
+                display: none;
+                visibility: hidden;
+                opacity: 0;
+            }
+        }
+    }
+}

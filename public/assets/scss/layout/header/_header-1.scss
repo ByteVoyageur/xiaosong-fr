@@ -1,0 +1,133 @@
+@use "../../utils" as *;
+/*----------------------------------------*/
+/*  3.1 Header Style 1
+/*----------------------------------------*/
+
+.#{$theme-prifix}-header {
+  &-transparent {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 99;
+  }
+
+  &-mob-space {
+    @media #{$md,$xs} {
+      padding: 15px 0;
+    }
+  }
+
+  &-border {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 1px;
+    width: 0%;
+    background-color: rgba($color: $white, $alpha: 0.2);
+  }
+
+  &-hamburger {
+    height: 16px;
+    line-height: 16px;
+
+    & .#{$theme-prifix}-hamburger-btn {
+      @include transform(translateY(-7px));
+    }
+  }
+
+  &-cv {
+    &-btn {
+      display: inline-block;
+      width: 40px;
+      height: 40px;
+      line-height: 40px;
+      text-align: center;
+      font-size: 18px;
+      color: var(--tp-common-black-2);
+      background-color: #bce70c;
+      border-radius: 6px;
+
+      & svg {
+        @extend %svg-2;
+      }
+    }
+  }
+}
+
+.tp-header-area {
+  &.tp-header-sticky-cloned {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 98;
+    visibility: hidden;
+    transform: translateY(-100%);
+    background: #324623;
+    transition: transform 500ms ease, visibility 500ms ease;
+  }
+  &.tp-header-pinned {
+    transform: translateY(0%);
+    visibility: visible;
+  }
+}
+
+.tp-header-4__area {
+  &.tp-header-sticky-cloned {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 98;
+    visibility: hidden;
+    transform: translateY(-100%);
+    background: #192144;
+    box-shadow: 0px 2px 6px 0px rgba(5, 10, 30, 0.4),
+      0px 1px 0px 0px rgba(255, 255, 255, 0.2);
+    transition: transform 500ms ease, visibility 500ms ease;
+    &.tp-header-4__plr {
+      padding-top: 0;
+      @media #{$lg,$md,$xs}{
+        padding-top: 15px;
+        
+      }
+    }
+  }
+  & .tp-header-4__menu > nav > ul > li > a {
+    padding: 22px 0;
+  }
+  &.tp-header-pinned {
+    transform: translateY(0%);
+    visibility: visible;
+  }
+}
+.tp-header-3__area {
+  &.tp-header-sticky-cloned {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 98;
+    visibility: hidden;
+    transform: translateY(-100%);
+    background: #192144;
+    box-shadow: 0px 2px 6px 0px rgba(5, 10, 30, 0.4),
+      0px 1px 0px 0px rgba(255, 255, 255, 0.2);
+    transition: transform 500ms ease, visibility 500ms ease;
+    &.tp-header-3__ptlr {
+      padding: 15px 85px;
+    }
+  }
+  &.tp-header-pinned {
+    transform: translateY(0%);
+    visibility: visible;
+  }
+}
+#awesome-cursor-circle {
+  &.hide {
+    display: none;
+  }
+}
