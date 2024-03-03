@@ -1,17 +1,15 @@
-import Error from "@/components/error";
-import Wrapper from "@/layouts/Wrapper";
+import Error from '@/components/error'
+import Wrapper from '@/layouts/Wrapper'
 
- 
- 
 export const metadata = {
-  title: "404 error || Diego React Next js Template",
-};
+  title: '404 error || xiaosong React Next js',
+}
 const index = () => {
   return (
     <Wrapper>
       <Error />
     </Wrapper>
-  );
-};
+  )
+}
 
-export default index;
+export default index
